@@ -4,7 +4,7 @@ import sidebar from './sidebar'
 console.log('sidebar: ', sidebar)
 
 export default defineConfig({
-    title: 'Vitepress-issues-page',
+    title: '前端路线图',
     themeConfig: {
         socialLinks: [
           { icon: 'github', link: githubLink },
@@ -20,5 +20,8 @@ export default defineConfig({
             lang: 'zh-cn',
             label: '简体中文'
         },
+    },
+    markdown: {
+        theme: 'github-dark',
     },
 })

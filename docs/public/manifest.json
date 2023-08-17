@@ -1,0 +1,19 @@
+{
+    "name": "前端路线图",
+    "short_name": "前端路线图",
+    "id": "frontend-roadmap",
+    "start_url": ".",
+    "display": "standalone",
+    "description": "前端路线图，记录个人积累",
+    "icons": [
+        {
+            "src": "512.png",
+            "type": "image/png",
+            "sizes": "512x512"
+        }
+    ],
+
+    "theme_color": "#80B40D",
+    "background_color": "#80B40D",
+    "lang": "zh-CN"
+}

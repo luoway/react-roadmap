@@ -17,6 +17,7 @@ export default withPwa(defineConfig({
         sidebarMenuLabel: '菜单',
         outlineTitle: '导航',
         darkModeSwitchLabel: '夜间模式',
+        returnToTopLabel: '返回顶部',
         sidebar,
     },
     locales: {
@@ -50,18 +51,30 @@ export default withPwa(defineConfig({
             name: '前端路线图',
             short_name: '前端路线图',
             description: '前端路线图，记录个人积累',
-            theme_color: '#80B40D',
-            background_color: '#80B40D',
             icons: [
                 {
                     src: './512.png',
                     sizes: '512x512',
                     type: 'image/png'
                 }
-            ]
+            ],
+            theme_color: '#80B40D',
+            background_color: '#80B40D',
+            lang: 'zh-CN',
         },
         workbox: {
-            globPatterns: ['**/*.{css,js,html,svg,png,ico,txt,woff2}'],
+            runtimeCaching: [
+                {
+                    handler: 'StaleWhileRevalidate',
+                    urlPattern: /\.html$/,
+                    method: 'GET',
+                },
+                {
+                    handler: 'CacheFirst',
+                    urlPattern: /\.(js|css|png|jpg|jpeg|gif|woff2)$/,
+                    method: 'GET',
+                }
+            ]
         },
     }
 }))

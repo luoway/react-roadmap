@@ -1,0 +1,7 @@
+user-agent: *
+Allow: .html$
+Allow: .ico$
+Disallow: .jpg$
+Disallow: .jpeg$
+Disallow: .png$
+Disallow: .gif$

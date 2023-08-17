@@ -2,6 +2,7 @@
     "name": "vitepress-issues-page",
     "version": "0.0.0",
     "description": "",
+    "type": "module",
     "scripts": {
         "all": "node scripts/all",
         "single": "node scripts/single",
@@ -12,7 +13,9 @@
     "author": "luoway",
     "license": "MIT",
     "devDependencies": {
-        "vitepress": "1.0.0-beta.2"
+        "@vite-pwa/vitepress": "^0.2.0",
+        "vite-plugin-pwa": "^0.16.4",
+        "vitepress": "^1.0.0-rc.4"
     },
     "dependencies": {
         "@octokit/graphql": "^5.0.6",

@@ -33,7 +33,7 @@ export default withPwa(defineConfig({
             'link',
             {
                 rel: 'apple-touch-icon',
-                href: './apple-touch-icon.png',
+                href: './apple-touch-icon.jpeg',
                 sizes: '180x180'
             }
         ]

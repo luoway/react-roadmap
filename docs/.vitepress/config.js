@@ -38,7 +38,7 @@ export default withPwa(defineConfig({
             }
         ]
     ],
-    paw: {
+    pwa: {
         registerType: 'autoUpdate',
         includeAssets: [
             'favicon.icon',

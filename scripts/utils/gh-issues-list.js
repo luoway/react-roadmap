@@ -1,15 +1,10 @@
-const {graphqlWithAuth} = require('./gh')
-
-const {
-    owner,
-    repoName,
-    acceptLabels,
-} = require('./constants')
+import { graphqlWithAuth } from './gh.js'
+import { owner, repoName, acceptLabels } from './constants.js'
 
 const pageSize = 100 // github api limit
 const total = []
 
-async function getIssues(labels){
+export async function getIssues(labels) {
     const last = total.length && total[total.length - 1]
     const { repository } = await graphqlWithAuth(`
         {
@@ -41,14 +36,10 @@ async function getIssues(labels){
         }
     `)
 
-    if(repository?.issues?.edges?.length) {
+    if (repository?.issues?.edges?.length) {
         total.push(...repository.issues.edges)
         return await getIssues(labels)
     } else {
         return total
     }
-}
-
-module.exports = {
-    getIssues
 }

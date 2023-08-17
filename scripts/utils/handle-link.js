@@ -1,16 +1,18 @@
-const path = require('path')
-const fse = require('fs-extra')
-const {
-    repository
-} = require('./constants')
-const githubLinkPath = path.join(__dirname, '../../docs/.vitepress/github-link.js')
+import path from 'path'
+import fse from 'fs-extra'
+import { repository } from './constants.js'
 
-function genGitUrl(){
+const githubLinkPath = path.join(
+    __dirname,
+    '../../docs/.vitepress/github-link.js'
+)
+
+function genGitUrl() {
     return `https://github.com/${repository}`
 }
 
-module.exports = {
-    write(){
+export default {
+    write() {
         fse.ensureFileSync(githubLinkPath)
         fse.writeFileSync(githubLinkPath, `export default '${genGitUrl()}'`)
     }

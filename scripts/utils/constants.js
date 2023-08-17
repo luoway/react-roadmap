@@ -1,22 +1,22 @@
-const path = require('path')
-const fse = require('fs-extra')
+import path from 'path'
+import fse from 'fs-extra'
 
-let acceptLabels = []
-try{
-    const labelrc = fse.readFileSync(path.join(process.cwd(), '.labelrc'), 'utf-8')
+export let acceptLabels = []
+try {
+    const labelrc = fse.readFileSync(
+        path.join(process.cwd(), '.labelrc'),
+        'utf-8'
+    )
     acceptLabels = labelrc.split(/\r|\n/).filter(Boolean)
-}catch(e){
+} catch (e) {
     console.error('acceptLabels load fail.', e)
 }
 
-module.exports = {
-    token: process.env.GITHUB_TOKEN,
-    owner: process.env.GITHUB_OWNER,
-    repository: process.env.GITHUB_REPO,
-    repoName: process.env.GITHUB_REPO.split('/')[1],
-    number: process.env.GITHUB_ISSUE_NUMBER,
-    action: process.env.GITHUB_EVENT_ACTION,
-    labels: process.env.GITHUB_ISSUE_LABELS,
-    actionLabel: process.env.GITHUB_ISSUE_LABEL,
-    acceptLabels,
-}
+export const token = process.env.GITHUB_TOKEN
+export const owner = process.env.GITHUB_OWNER
+export const repository = process.env.GITHUB_REPO
+export const repoName = process.env.GITHUB_REPO.split('/')[1]
+export const number = process.env.GITHUB_ISSUE_NUMBER
+export const action = process.env.GITHUB_EVENT_ACTION
+export const labels = process.env.GITHUB_ISSUE_LABELS
+export const actionLabel = process.env.GITHUB_ISSUE_LABEL

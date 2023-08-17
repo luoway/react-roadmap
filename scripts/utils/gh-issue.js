@@ -1,10 +1,7 @@
-const {graphqlWithAuth} = require('./gh')
-const {
-    owner,
-    repoName
-} = require('./constants')
+import { graphqlWithAuth } from './gh.js'
+import { owner, repoName } from './constants.js'
 
-async function getIssue(number){
+export async function getIssue(number) {
     const { repository } = await graphqlWithAuth(`
         {
             repository(owner: "${owner}", name: "${repoName}") {
@@ -23,8 +20,4 @@ async function getIssue(number){
         }
     `)
     return repository.issue
-}
-
-module.exports = {
-    getIssue
 }

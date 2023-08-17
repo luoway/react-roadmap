@@ -1,7 +1,7 @@
-const path = require('path')
-const fse = require('fs-extra')
+import path from 'path'
+import fse from 'fs-extra'
 
-const sidebarPath = path.join(__dirname, '../../docs/.vitepress/sidebar.js')
+const sidebarPath = path.join(__dirname, '../../docs/.vitepress/sidebar')
 const prefix = 'export default '
 
 function genItem(issueData){
@@ -115,7 +115,7 @@ function update(issueData, labels, acceptLabels){
     _writeFile(sidebar)
 }
 
-module.exports = {
+export default {
     read,
     write,
     remove,

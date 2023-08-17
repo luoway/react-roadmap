@@ -7,7 +7,7 @@ import GithubLink from './utils/handle-link.js'
 import Sidebar from './utils/handle-sidebar.js'
 import { acceptLabels } from './utils/constants.js'
 
-const targetDir = path.join(__dirname, '../docs')
+const targetDir = path.join(process.cwd(), 'docs')
 
 const p = cleanDoc()
 let issues = []

@@ -5,7 +5,7 @@ import { writeDoc, removeDoc } from './utils/handle-doc.js'
 import Sidebar from './utils/handle-sidebar.js'
 import { number, labels, acceptLabels } from './utils/constants.js'
 
-const targetDir = path.join(__dirname, '../docs')
+const targetDir = path.join(process.cwd(), 'docs')
 
 const labelList = labels ? labels.split(',') : []
 const renderLabels = labelList.filter((label) => acceptLabels.includes(label))

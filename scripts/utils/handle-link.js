@@ -3,8 +3,8 @@ import fse from 'fs-extra'
 import { repository } from './constants.js'
 
 const githubLinkPath = path.join(
-    __dirname,
-    '../../docs/.vitepress/github-link.js'
+    process.cwd(),
+    'docs/.vitepress/github-link.js'
 )
 
 function genGitUrl() {

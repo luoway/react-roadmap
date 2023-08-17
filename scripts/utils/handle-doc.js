@@ -1,7 +1,7 @@
 import path from 'path'
 import fse from 'fs-extra'
 
-const targetDir = path.join(__dirname, '../../docs')
+const targetDir = path.join(process.cwd(), 'docs')
 
 export function writeDoc(filePath, issueData) {
     return fse.writeFile(filePath, `# ${issueData.title}\n${issueData.body}`)

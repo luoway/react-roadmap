@@ -1,7 +1,7 @@
 import path from 'path'
 import fse from 'fs-extra'
 
-const sidebarPath = path.join(__dirname, '../../docs/.vitepress/sidebar')
+const sidebarPath = path.join(process.cwd(), 'docs/.vitepress/sidebar')
 const prefix = 'export default '
 
 function genItem(issueData){

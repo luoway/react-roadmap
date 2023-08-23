@@ -63,6 +63,7 @@ export default withPwa(defineConfig({
             lang: 'zh-CN',
         },
         workbox: {
+            globPatterns:  ["**\/*.{js,css}"],
             runtimeCaching: [
                 {
                     handler: 'StaleWhileRevalidate',

@@ -1,3 +1,3 @@
-# 前端路线图
+# Node.js路线图
 
-[![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://luoway.github.io/frontend-roadmap/)
+[![Hosted with GH Pages](https://img.shields.io/badge/Hosted_with-GitHub_Pages-blue?logo=github&logoColor=white)](https://luoway.github.io/nodejs-roadmap/)

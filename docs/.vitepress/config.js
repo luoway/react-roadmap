@@ -6,8 +6,8 @@ import sidebar from './sidebar'
 console.log('sidebar: ', sidebar)
 
 export default withPwa(defineConfig({
-    title: '前端路线图',
-    description: '前端路线图，记录个人积累',
+    title: 'Node.js路线图',
+    description: 'Node.js路线图，记录个人积累',
     lang: 'zh-CN',
     themeConfig: {
         socialLinks: [
@@ -47,10 +47,10 @@ export default withPwa(defineConfig({
             'apple-touch-icon.jpeg',
         ],
         manifest: {
-            id: 'frontend-roadmap',
-            name: '前端路线图',
-            short_name: '前端路线图',
-            description: '前端路线图，记录个人积累',
+            id: 'nodejs-roadmap',
+            name: 'Node.js路线图',
+            short_name: 'Node.js路线图',
+            description: 'Node.js路线图，记录个人积累',
             icons: [
                 {
                     src: './512.png',

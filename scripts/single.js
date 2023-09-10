@@ -14,24 +14,23 @@ if (renderLabels.length === 0) {
     //remove
     removeDoc(number)
     Sidebar.remove(number)
-    return
-}
-
-//add or update file
-const filePath = path.join(targetDir, `${number}.md`)
-const p1 = fse.ensureFile(filePath)
-const p2 = getIssue(number)
-await p1
-
-let issueData
-try {
-    issueData = await p2
-} catch (e) {
-    console.error(e)
-    throw new Error('get issue fail.')
-}
-
-if (issueData) {
-    writeDoc(filePath, issueData)
-    Sidebar.update(issueData, renderLabels, acceptLabels)
+}else{
+    //add or update file
+    const filePath = path.join(targetDir, `${number}.md`)
+    const p1 = fse.ensureFile(filePath)
+    const p2 = getIssue(number)
+    await p1
+    
+    let issueData
+    try {
+        issueData = await p2
+    } catch (e) {
+        console.error(e)
+        throw new Error('get issue fail.')
+    }
+    
+    if (issueData) {
+        writeDoc(filePath, issueData)
+        Sidebar.update(issueData, renderLabels, acceptLabels)
+    }
 }

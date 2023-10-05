@@ -47,10 +47,10 @@ export default withPwa(defineConfig({
             'apple-touch-icon.jpeg',
         ],
         manifest: {
-            id: 'nodejs-roadmap',
-            name: 'Node.js路线图',
-            short_name: 'Node.js路线图',
-            description: 'Node.js路线图，记录个人积累',
+            id: 'react-roadmap',
+            name: 'React路线图',
+            short_name: 'React路线图',
+            description: 'React路线图，记录个人积累',
             icons: [
                 {
                     src: './512.png',

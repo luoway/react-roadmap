@@ -6,8 +6,8 @@ import sidebar from './sidebar'
 console.log('sidebar: ', sidebar)
 
 export default withPwa(defineConfig({
-    title: 'Node.js路线图',
-    description: 'Node.js路线图，记录个人积累',
+    title: 'React路线图',
+    description: 'React路线图，记录个人积累',
     lang: 'zh-CN',
     themeConfig: {
         socialLinks: [

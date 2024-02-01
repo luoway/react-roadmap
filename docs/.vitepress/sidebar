@@ -1,1 +1,1 @@
-export default [{"text":"组件","items":[{"text":"函数式组件","link":"/1"},{"text":"JSX","link":"/2"},{"text":"props & state","link":"/3"},{"text":"条件渲染","link":"/4"}]},{"text":"渲染","items":[]}]
+export default [{"text":"组件","items":[{"text":"函数式组件","link":"/1"},{"text":"JSX","link":"/2"},{"text":"props & state","link":"/3"},{"text":"条件渲染","link":"/4"}]},{"text":"渲染","items":[{"text":"组件生命周期 - useEffect","link":"/5"}]}]
